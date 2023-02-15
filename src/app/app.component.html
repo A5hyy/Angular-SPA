@@ -1,0 +1,41 @@
+<h1>My first SPA</h1>
+
+<div class="box">
+
+  <a [routerLink]="['/home']">Home</a>
+  <button type="button" [routerLink]="['/cat']">Cat</button>
+  <button type="button" [routerLink]="['/bear']">Bear</button>
+  <button type="button" [routerLink]="['/horse']">Horse</button>
+
+</div>
+
+<div class="box">
+  <!-- link with form! : formgroup ts -->
+  <!-- click submit and the add function will be called -->
+  <form [formGroup]="form" (ngSubmit)="add()">
+    <table>
+      <tr>
+        <td>
+          Name: 
+        </td>
+        <td>
+          <!-- FCN link with name:this.fb.control -->
+          <input type="text" size="30" formControlName="name">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button type="submit">Add</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>
+
+<div class="box">
+
+  <!-- to tell where you want to display the component -->
+  <router-outlet></router-outlet>
+
+</div>
+  

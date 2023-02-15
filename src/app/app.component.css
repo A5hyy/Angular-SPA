@@ -1,0 +1,8 @@
+.box {
+    padding: 8px;
+    border: 1px rgb(248, 0, 0) solid;
+} 
+
+a, button{
+    margin: 10px;
+ }
